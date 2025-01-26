@@ -30,7 +30,7 @@ public class Movement : MonoBehaviour
     {
         powerText.text = $"Power: {power / 10}%";
 
-        if (Input.GetKey(KeyCode.W) && canJump && power > 0) power -= 1;
+        if (Input.GetKeyDown(KeyCode.W) && canJump && power > 0) power -= 10;
 
         if (power <= 0) losePanel.SetActive(true);
     }
@@ -72,7 +72,6 @@ public class Movement : MonoBehaviour
         if (collision.CompareTag("Finish"))
         {
             if (SceneManager.GetActiveScene().buildIndex + 1 != SceneManager.sceneCountInBuildSettings) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            else print("You win");
         }
     }
 }
