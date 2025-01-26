@@ -7,4 +7,14 @@ public class PlayButton : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

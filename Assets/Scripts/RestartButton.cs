@@ -5,7 +5,7 @@ public class RestartButton : MonoBehaviour
 {
     public void Restart()
     {
-        Movement.power = 1000;
+        Movement.power = 100;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
