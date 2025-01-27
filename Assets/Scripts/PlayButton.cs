@@ -17,4 +17,15 @@ public class PlayButton : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void Restart()
+    {
+        Movement.power = 1000;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

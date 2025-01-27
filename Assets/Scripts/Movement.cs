@@ -1,4 +1,3 @@
-using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -64,6 +63,7 @@ public class Movement : MonoBehaviour
     {
         if (collision.CompareTag("Recharge"))
         {
+            GetComponent<AudioSource>().Play();
             losePanel.SetActive(false);
             power = 1000;
             Destroy(collision.gameObject);
