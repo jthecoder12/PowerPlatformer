@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 6184586208520267508}
   - component: {fileID: 2150475933316597632}
   - component: {fileID: 4827451985010284141}
-  - component: {fileID: 4430591771487842133}
+  - component: {fileID: 2729526810322829787}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -278,8 +278,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4430591771487842133}
-        m_TargetAssemblyTypeName: RestartButton, Assembly-CSharp
+      - m_Target: {fileID: 2729526810322829787}
+        m_TargetAssemblyTypeName: PlayButton, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -290,7 +290,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4430591771487842133
+--- !u!114 &2729526810322829787
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4230926824368453080}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07815bef53ee9d2499672b6b74e484f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 70cc63c71f7002c47a6bcd5583e0ff67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6518171367429045967
