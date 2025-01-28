@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayButton : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject losePanel;
+
     public void Play()
     {
         SceneManager.LoadScene(1);
@@ -15,6 +18,8 @@ public class PlayButton : MonoBehaviour
 
     public void MainMenu()
     {
+        Movement.power = 1000;
+        losePanel?.SetActive(false);
         SceneManager.LoadScene(0);
     }
 

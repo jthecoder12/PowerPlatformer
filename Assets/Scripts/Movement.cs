@@ -13,6 +13,9 @@ public class Movement : MonoBehaviour
     private GameObject losePanel;
 
     [SerializeField]
+    private GameObject pauseMenu;
+
+    [SerializeField]
     private float speed;
 
     [SerializeField]
@@ -30,8 +33,17 @@ public class Movement : MonoBehaviour
         powerText.text = $"Power: {power / 10}%";
 
         if (Input.GetKeyDown(KeyCode.W) && canJump && power > 0) power -= 10;
+        if (Input.GetKeyDown(KeyCode.Escape) && !losePanel.activeInHierarchy)
+        {
+            Time.timeScale = pauseMenu.activeInHierarchy ? 1 : 0;
+            pauseMenu.SetActive(!pauseMenu.activeInHierarchy);
+        }
 
-        if (power <= 0) losePanel.SetActive(true);
+        if (power <= 0)
+        {
+            pauseMenu.SetActive(false);
+            losePanel.SetActive(true);
+        }
     }
 
     private void FixedUpdate()

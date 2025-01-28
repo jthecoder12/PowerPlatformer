@@ -363,6 +363,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6daee6f60bb6a546976fef5ead8fd45, type: 3}
+--- !u!1 &541390319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5551590334147774160, guid: c6daee6f60bb6a546976fef5ead8fd45, type: 3}
+  m_PrefabInstance: {fileID: 541390318}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &763799729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -924,6 +929,10 @@ PrefabInstance:
       propertyPath: losePanel
       value: 
       objectReference: {fileID: 2114476697}
+    - target: {fileID: 1644986932788690006, guid: 1f24e5f1b78f4d244a01816f98d48240, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 541390319}
     - target: {fileID: 2506704991112105721, guid: 1f24e5f1b78f4d244a01816f98d48240, type: 3}
       propertyPath: m_Name
       value: Player
