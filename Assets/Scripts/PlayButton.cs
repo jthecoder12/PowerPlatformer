@@ -8,7 +8,7 @@ public class PlayButton : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void Credits()
@@ -19,7 +19,11 @@ public class PlayButton : MonoBehaviour
     public void MainMenu()
     {
         Movement.power = 1000;
-        losePanel?.SetActive(false);
+        try
+        {
+            losePanel?.SetActive(false);
+        }
+        catch (UnassignedReferenceException) { }
         SceneManager.LoadScene(0);
     }
 
@@ -32,5 +36,10 @@ public class PlayButton : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void Instructions()
+    {
+        SceneManager.LoadScene(1);
     }
 }
