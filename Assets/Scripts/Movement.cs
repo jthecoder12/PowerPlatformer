@@ -73,17 +73,19 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Recharge"))
+        if (collision.CompareTag("Recharge") && !losePanel.activeInHierarchy)
         {
             GetComponent<AudioSource>().Play();
-            losePanel.SetActive(false);
             power = 1000;
             Destroy(collision.gameObject);
         }
 
-        if (collision.CompareTag("Finish"))
+        if (collision.CompareTag("key"))
         {
-            if (SceneManager.GetActiveScene().buildIndex + 1 != SceneManager.sceneCountInBuildSettings) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Destroy(GameObject.FindGameObjectWithTag("door"));
+            Destroy(collision.gameObject);
         }
+
+        if (collision.CompareTag("Finish") && SceneManager.GetActiveScene().buildIndex + 1 != SceneManager.sceneCountInBuildSettings && !losePanel.activeInHierarchy) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
