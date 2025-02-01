@@ -18,6 +18,7 @@ public class PlayButton : MonoBehaviour
 
     public void MainMenu()
     {
+        Time.timeScale = 1;
         Movement.power = 1000;
         try
         {
