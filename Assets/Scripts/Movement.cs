@@ -48,17 +48,17 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.A) && power > 0)
+        if ((Input.GetKey(KeyCode.A) || MovementButton.leftheld) && power > 0)
         {
             rb.AddForceX(-speed * Time.fixedDeltaTime, ForceMode2D.Force);
             power -= 1;
         }
-        if (Input.GetKey(KeyCode.D) && power > 0)
+        if ((Input.GetKey(KeyCode.D) || MovementButton.rightheld) && power > 0)
         {
             rb.AddForceX(speed * Time.fixedDeltaTime, ForceMode2D.Force);
             power -= 1;
         }
-        if (Input.GetKey(KeyCode.W) && canJump && power > 0) rb.AddForceY(jumpHeight * Time.fixedDeltaTime, ForceMode2D.Force);
+        if ((Input.GetKey(KeyCode.W) || MovementButton.upheld) && canJump && power > 0) rb.AddForceY(jumpHeight * Time.fixedDeltaTime, ForceMode2D.Force);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

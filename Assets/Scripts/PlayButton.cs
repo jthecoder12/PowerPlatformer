@@ -30,6 +30,7 @@ public class PlayButton : MonoBehaviour
 
     public void Restart()
     {
+        Time.timeScale = 1;
         Movement.power = 1000;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
